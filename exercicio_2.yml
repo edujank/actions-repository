@@ -16,11 +16,11 @@ name: Exercicio 2
         VAR_JOB: 36
         
       steps:
-        - name: Checkout repo
-          uses: actions/checkout@v3.3.0
-          
-        - name: Upload a build artefact
-          uses: actions/upload-artifact@v3.1.2
+      - name: Checkout repository
+        uses: actions/checkout@v3.3.0
+        
+      - name: Upload a build Artfact
+        uses: actions/upload-artifact@v3.1.2
           with:
             name: ${{ vars.NOME }}
             path: .
