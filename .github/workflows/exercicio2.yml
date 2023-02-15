@@ -1,26 +1,18 @@
-name: Exercicio 2
-
-  on:
-    push:
-    
-  env:
-    VAR_1: Eduardo Jankovski
-    VAR_2: Curitiba
-   
-  jobs:
+name: Exercicio em Aula
+on:
+  push:
   
-    checkout_code:
-      name: Checkout do codigo
-      runs-on: ubuntu-latest
-      env:
-        VAR_JOB: 36
+jobs:
+  checkout_code:
+    name: Do checkout code
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.3.0
         
-      steps:
-        - name: Checkout repo
-          uses: actions/checkout@v3.3.0
-          
-        - name: Upload a build artefact
-          uses: actions/upload-artifact@v3.1.2
-          with:
-            name: ${{ vars.NOME }}
-            path: .
+      - name: Upload a build Artfact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: ${{ vars.NOME }}
+          path: .
