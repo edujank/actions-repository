@@ -1,10 +1,8 @@
 name: Exercicio de Workflow
-
-on:
   push:
   
 jobs:
-  checkout_code:
+    checkout_code:
     name: Checkout do codigo
     runs-on: ubuntu-latest
     
